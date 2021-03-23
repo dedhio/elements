@@ -6,9 +6,9 @@ import 'edit_element_dialog.dart';
 
 class ElementTile extends StatelessWidget {
 
-  final DocumentSnapshot snapshot;
+  final DocumentSnapshot element;
 
-  ElementTile(this.snapshot);
+  ElementTile(this.element);
 
   TextStyle textStyle = TextStyle(color: Colors.white);
 
@@ -16,11 +16,11 @@ class ElementTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
-        snapshot.data["simbolo"],
+        element.data["simbolo"],
         style: textStyle,
       ),
       subtitle: Text(
-        snapshot.data["nome"],
+        element.data["nome"],
         style: textStyle,
       ),
       trailing: Column(
@@ -28,12 +28,12 @@ class ElementTile extends StatelessWidget {
         children: <Widget>[
           Icon(Icons.keyboard_arrow_right, color: Colors.white,),
           Text(
-            "Massa ${snapshot.data["massa"]}",
+            "Massa ${element.data["massa"]}",
             textAlign: TextAlign.right,
             style: textStyle,
           ),
           Text(
-            "Distribuição ${snapshot.data["distribuicao"]}",
+            "Distribuição ${element.data["distribuicao"]}",
             style: textStyle,
           ),
         ],

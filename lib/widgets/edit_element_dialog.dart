@@ -37,13 +37,11 @@ class _EditElementDialogState extends State<EditElementDialog> {
               children: <Widget>[
                 StreamBuilder<bool>(
                     builder: (context, snapshot) {
-                      if(!snapshot.hasData) return Container();
                       return FlatButton(
                         child: Text("Excluir"),
                         textColor: Colors.red,
-                        onPressed: snapshot.data ? (){
-                          Navigator.of(context).pop();
-                        } : null,
+                        onPressed: (){
+                        }
                       );
                     }
                 ),
@@ -51,6 +49,8 @@ class _EditElementDialogState extends State<EditElementDialog> {
                     builder: (context, snapshot) {
                       return FlatButton(
                         child: Text("Salvar"),
+                        onPressed: (){
+                        }
                       );
                     }
                 )
