@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "130249214349",
+    "project_id": "apptabelaperiodica-7102a",
+    "storage_bucket": "apptabelaperiodica-7102a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130249214349:android:261816f663037242a915c4",
+        "android_client_info": {
+          "package_name": "com.elements"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130249214349-7o39tvcv4mglnr6001j89bgpphaalptc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDdBvFaikpLWt_XtB9__3UzUWU7_sSyQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130249214349-7o39tvcv4mglnr6001j89bgpphaalptc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130249214349:android:bdbe9092d9dc8510a915c4",
+        "android_client_info": {
+          "package_name": "com.tabela_periodica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130249214349-7o39tvcv4mglnr6001j89bgpphaalptc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDdBvFaikpLWt_XtB9__3UzUWU7_sSyQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130249214349-7o39tvcv4mglnr6001j89bgpphaalptc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
