@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text("Elements", style: TextStyle(fontSize: 25),),
       ),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey[850],
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
             canvasColor: Colors.pinkAccent,

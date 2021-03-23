@@ -3,10 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:elements/widgets/element_tile.dart';
 
 
-class ElementsTab extends StatelessWidget {
+class ElementsTab extends StatefulWidget {
+
+  @override
+  _ElementsTabState createState() => _ElementsTabState();
+}
+
+class _ElementsTabState extends State<ElementsTab> with AutomaticKeepAliveClientMixin{
+
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
+
     return Column(
       children: <Widget>[
         Padding(
@@ -29,22 +38,21 @@ class ElementsTab extends StatelessWidget {
                 return Center(
                   child: CircularProgressIndicator(),
                 );
-              } else {
-                var dividedTiles = ListTile
-                    .divideTiles(
-                    tiles: snapshot.data.documents.map((doc) {
-                      return ElementTile(doc);
-                    }).toList(),
-                    color: Colors.grey[500])
-                    .toList();
-                return ListView(
-                  children: dividedTiles,
-                );
               }
+              return ListView.builder(
+                itemCount: snapshot.data.documents.length,
+                itemBuilder: (context, index) {
+                  return ElementTile(snapshot.data.documents[index]);
+                },
+              );
             },
           )
         )
       ]
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }
