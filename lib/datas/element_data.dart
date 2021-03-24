@@ -27,5 +27,18 @@ class ElementData{
 
   }
 
+  Map<String, dynamic> toMap(){
+    return {
+      "simbolo": simbolo,
+      "nome": nome,
+      "ions": ions,
+      "distribuicao": distribuicao,
+      "numero": numero,
+      "periodo": periodo,
+      "familia": familia,
+      "massa": massa,
+    };
+  }
+
 
 }

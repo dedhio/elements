@@ -2,6 +2,8 @@ import 'package:elements/widgets/edit_element_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:elements/tabs/elements_tab.dart';
 
+import 'element_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -88,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.pinkAccent,
         onPressed: (){
           showDialog(context: context,
-              builder: (context) => EditElementDialog()
+              builder: (context) => ElementScreen()
           );
         },
       )

@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:elements/screens/element_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -24,10 +25,10 @@ class ElementTile extends StatelessWidget {
           expandedAlignment: Alignment.centerLeft,
           leading: GestureDetector(
             onTap: (){
-              showDialog(context: context,
-                  builder: (context) => EditElementDialog(
-                    element: element,
-                  )
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ElementScreen(
+                    element: element,)
+                )
               );
             },
             child: CircleAvatar(
@@ -47,66 +48,45 @@ class ElementTile extends StatelessWidget {
             style: TextStyle(color: Colors.grey[850], fontWeight: FontWeight.w500),
           ),
           children: <Widget>[
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
               children: <Widget>[
-                Text(
-                  "Numero atômico: ${element.data["numero"]}",
-                  style: textStyle,
+                Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Numero atômico: ${element.data["numero"]}",
+                        style: textStyle,
+                      ),
+                      Text(
+                        "Distribuição: ${element.data["distribuicao"]}",
+                        style: textStyle,
+                      ),
+                    ],
+                  ),
                 ),
-                Text(
-                  "Distribuição: ${element.data["distribuicao"]}",
-                  style: textStyle,
-                ),
-                Text(
-                  "Familia: ${element.data["familia"]}",
-                  style: textStyle,
-                ),
-                Text(
-                  "Periodo: ${element.data["periodo"]}",
-                  style: textStyle,
-                ),
-              ],
+                Padding(
+                  padding: EdgeInsets.only(left: 0),
+                  child:Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Familia: ${element.data["familia"]}",
+                        style: textStyle,
+                      ),
+                      Text(
+                        "Periodo: ${element.data["periodo"]}",
+                        style: textStyle,
+                      ),
+                    ],
+                  ),
+                )
+              ]
             ),
           ],
         ),
       ),
-    );
-
-
-
-
-
-
-    return ListTile(
-      title: Text(
-        element.data["simbolo"],
-        style: textStyle,
-      ),
-      subtitle: Text(
-        element.data["nome"],
-        style: textStyle,
-      ),
-      trailing: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          Icon(Icons.keyboard_arrow_right, color: Colors.white,),
-          Text(
-            "Massa ${element.data["massa"]}",
-            textAlign: TextAlign.right,
-            style: textStyle,
-          ),
-          Text(
-            "Distribuição ${element.data["distribuicao"]}",
-            style: textStyle,
-          ),
-        ],
-      ),
-      onTap: () {
-        Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => EditElementDialog())
-        );
-       },
     );
   }
 }
