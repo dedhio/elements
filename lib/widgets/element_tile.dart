@@ -20,7 +20,7 @@ class ElementTile extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
       child: Card(
         child: ExpansionTile(
-          childrenPadding: EdgeInsets.all(10),
+          childrenPadding: EdgeInsets.only(left: 30, top: 0, right: 10, bottom: 10),
           expandedAlignment: Alignment.centerLeft,
           leading: GestureDetector(
             onTap: (){

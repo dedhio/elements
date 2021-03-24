@@ -31,7 +31,7 @@ class _EditElementDialogState extends State<EditElementDialog> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text("Teste"),
+            Text("Janela de edição (ainda em teste)"),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
