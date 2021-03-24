@@ -60,11 +60,6 @@ class _ElementScreenState extends State<ElementScreen> {
               icon: Icon(Icons.remove),
               onPressed: (){},
             ),
-            IconButton(
-              icon: Icon(Icons.save),
-              onPressed: (){
-              },
-            ),
           ],
         ),
         body: ScopedModelDescendant<ElementModel>(

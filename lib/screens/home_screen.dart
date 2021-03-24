@@ -1,3 +1,4 @@
+import 'package:elements/tabs/dev_tab.dart';
 import 'package:elements/widgets/edit_element_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:elements/tabs/elements_tab.dart';
@@ -80,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           children: <Widget>[
             ElementsTab(),
-            Container(color: Colors.grey,),
+            DevTab(),
             Container(color: Colors.tealAccent,),
           ],
         ),

@@ -36,6 +36,12 @@ class ElementModel extends Model {
 
   }
 
+  void removeElementItem(String elementId){
+    Firestore.instance.collection("elementos").document(elementId).delete();
+
+    notifyListeners();
+  }
+
   Future<Null> _saveElementData(Map<String, dynamic> elementElement) async {
     await Firestore.instance.collection("elementos").document().setData(elementData);
   }

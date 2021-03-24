@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:elements/models/element_model.dart';
 import 'package:elements/screens/element_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -81,7 +82,7 @@ class ElementTile extends StatelessWidget {
                       ),
                     ],
                   ),
-                )
+                ),
               ]
             ),
           ],
